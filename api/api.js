@@ -27,9 +27,6 @@ app.get('/', (req, res) => {
   res.send('API jalan 🚀');
 });
 
-app.listen(port, () => {
-  console.log(`Server jalan di http://localhost:${port}`);
-});
 
 app.use(express.json());
 
@@ -41,3 +38,4 @@ app.get('/api/crime-note-members/:username_id', (req, res) => {
     res.json(member);
   });
 });
+export default app;
