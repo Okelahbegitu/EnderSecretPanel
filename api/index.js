@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 
 app.use(express.json());
 
-app.get('/api/crime-note-members/:username_id', (req, res) => {
+app.get('/crime-note-members/:username_id', (req, res) => {
   CrimeNoteMember.findOne({ usernameId: req.params.username_id }).then(member => {
     if (!member) {
       return res.status(404).json({ message: 'Member tidak ditemukan' });
